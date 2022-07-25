@@ -58,9 +58,11 @@ cmake_minimum_required(VERSION 2.8.3)
 project(rvo2)
 
 find_package(catkin)
-
+find_package(OpenMP REQUIRED)
 catkin_package(INCLUDE_DIRS include LIBRARIES rvo2)
  include_directories(include/RVO)
 
 add_library(rvo2 
   src/Agent.cpp src/KdTree.cpp src/Obstacle.cpp src/RVOSimulator.cpp)
+
+target_link_libraries(rvo2 OpenMP::OpenMP_CXX)
