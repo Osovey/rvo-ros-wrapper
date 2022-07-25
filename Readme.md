@@ -26,7 +26,7 @@ https://github.com/bcharrow/rvo
   - **发布话题**：-
   - **Action**：
     - Move.action(action/Move.action)
-    - **介绍**：action客户端，在接收到**\goal**话题后，通过action向move_server发送请求，move_server会计算agent的路线，并在行进过程中进行碰撞避免。
+    - **介绍**：action客户端，在接收到\goal话题后，通过action向move_server发送请求，move_server会计算agent的路线，并在行进过程中进行碰撞避免。
 
 - **move_server**(src/move_server.cpp)
 
