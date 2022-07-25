@@ -1,0 +1,49 @@
+neighborDist: 10.0
+maxNeighbors: 10
+timeHorizon: 10.0
+timeHorizonObst: 3.0
+radius: 0.08
+maxSpeed: 0.4
+timestep: 0.2 # 1 / controller rate
+axel_width: 0.255
+los_margin: 0.1
+
+waypoint_spacing: 0.1
+path_margin: 0.6
+goal_tolerance: 0.1
+
+# http://gamma.cs.unc.edu/RVO2/documentation/2.0/params.html
+# timeStep
+# 	float (time)
+# 	The time step of the simulation. Must be positive.
+# maxNeighbors
+# 	size_t
+# 	The maximal number of other agents the agent takes into account in the
+# 	navigation. The larger this number, the longer the running time of the
+# 	simulation. If the number is too low, the simulation will not be safe.
+# maxSpeed
+# 	float (distance/time)
+# 	The maximum speed of the agent. Must be non-negative.
+# neighborDist
+# 	float (distance)
+# 	The maximal distance (center point to center point) to other agents the
+# 	agent takes into account in the navigation. The larger this number, the
+# 	longer the running time of the simulation. If the number is too low,
+# 	the simulation will not be safe. Must be non-negative.
+# radius
+# 	float (distance)
+# 	The radius of the agent. Must be non-negative.
+# timeHorizon
+# 	float (time)
+# 	The minimal amount of time for which the agent's velocities that are
+# 	computed by the simulation are safe with respect to other agents. The
+# 	larger this number, the sooner this agent will respond to the presence
+# 	of other agents, but the less freedom the agent has in choosing its
+# 	velocities. Must be positive.
+# timeHorizonObst
+# 	float (time)
+# 	The minimal amount of time for which the agent's velocities that are
+# 	computed by the simulation are safe with respect to obstacles. The
+# 	larger this number, the sooner this agent will respond to the presence
+# 	of obstacles, but the less freedom the agent has in choosing its
+# 	velocities. Must be positive.

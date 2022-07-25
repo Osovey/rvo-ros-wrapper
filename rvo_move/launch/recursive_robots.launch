@@ -1,0 +1,25 @@
+<launch>
+    <arg name="model"   default="$(find rvo_move)/urdf/robot.xacro" />
+    <arg name="total_num"   default="16"  />
+    <arg name="robot_id"    default="0"   />
+
+    <group ns="robot_$(arg robot_id)">
+        <param  name="robot_description"    command="$(find xacro)/xacro $(arg model) ns:=robot_$(arg robot_id)" />
+        <node pkg="joint_state_publisher"   type="joint_state_publisher"    name="joint_state_publisher" />
+        <node pkg="robot_state_publisher"   type="robot_state_publisher"    name="robot_state_publisher" />
+        <node pkg="rvo_move"    type="move_server"  name="move_server"  output="screen">
+        <rosparam file="$(find rvo_move)/config/scarab_move.yaml"   command="load" />
+        <param name="nbots" value="$(arg total_num)" />
+        <param name="id"    value="$(arg robot_id)" />
+        </node>
+        <node pkg="rvo_move"    type="move_client"  name="move_client"  output="screen" />
+    </group>
+
+    <node pkg="tf"  type="static_transform_publisher"   name="map_odom_broadcaster_$(arg robot_id)" args="0 0 0 0 0 0 map robot_$(arg robot_id)/odom 100" />
+
+    <include file="$(find rvo_move)/launch/recursive_robots.launch" if="$(eval (arg('total_num') > arg('robot_id') + 1))">
+        <arg name="total_num"   value="$(arg total_num)" />
+        <arg name="robot_id"    value="$(eval (arg('robot_id') + 1))" />
+    </include>
+
+</launch>

@@ -1,0 +1,5 @@
+#  Get the map as a nav_msgs/OccupancyGrid + include Cspace information
+---
+nav_msgs/OccupancyGrid map
+float32[] occ_dist
+float64 max_occ_dist

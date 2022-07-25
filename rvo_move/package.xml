@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<package>
+  <name>rvo_move</name>
+  <version>0.0.0</version>
+  <description>The rvo_move package</description>
+  <maintainer email="bcharrow@seas.upenn.edu">Ben Charrow</maintainer>
+  <author email="bcharrow@seas.upenn.edu">Ben Charrow</author>
+
+  <license>TODO</license>
+  <buildtool_depend>catkin</buildtool_depend>
+
+  <build_depend>roscpp</build_depend>
+  <build_depend>visualization_msgs</build_depend>
+  <build_depend>nav_msgs</build_depend>
+  <build_depend>rvo2</build_depend>
+  <build_depend>actionlib_msgs</build_depend>
+  <build_depend>actionlib</build_depend>
+  <build_depend>tf</build_depend>
+  <build_depend>player_map</build_depend>
+
+  <run_depend>roscpp</run_depend>
+  <run_depend>visualization_msgs</run_depend>
+  <run_depend>nav_msgs</run_depend>
+  <run_depend>rvo2</run_depend>
+  <run_depend>actionlib_msgs</run_depend>
+  <run_depend>actionlib</run_depend>
+  <run_depend>tf</run_depend>
+  <run_depend>player_map</run_depend>
+</package>

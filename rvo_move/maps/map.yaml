@@ -1,0 +1,9 @@
+# 缩小了5倍
+image: map.png
+resolution: 0.05
+origin: [-116.0, -113.0, 0.0]
+# origin: [0.0, 0.0, 0.0]
+negate: 0
+occupied_thresh: 0.65
+free_thresh: 0.235 # 0.196
+mode: trinary   # trinary, raw, scale

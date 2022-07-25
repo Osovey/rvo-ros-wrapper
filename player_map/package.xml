@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<package>
+  <name>player_map</name>
+  <version>0.0.0</version>
+  <description>The player_map package</description>
+  <maintainer email="bcharrow@seas.upenn.edu">Ben Charrow</maintainer>
+  <author email="bcharrow@seas.upenn.edu">Ben Charrow</author>
+
+  <license>TODO</license>
+  <buildtool_depend>catkin</buildtool_depend>
+
+  <build_depend>roscpp</build_depend>
+  <build_depend>nav_msgs</build_depend>
+  <build_depend>map_server</build_depend>
+
+  <run_depend>roscpp</run_depend>
+  <run_depend>nav_msgs</run_depend>
+  <run_depend>map_server</run_depend>
+</package>
