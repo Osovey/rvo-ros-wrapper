@@ -1,16 +1,16 @@
-neighborDist: 10.0
+neighborDist: 5.0
 maxNeighbors: 10
 timeHorizon: 10.0
 timeHorizonObst: 3.0
-radius: 0.08
-maxSpeed: 0.2
-timestep: 0.1 # 1 / controller rate
+# radius: 0.08
+maxSpeed: 0.4
+timestep: 0.05 # 1 / controller rate
 axel_width: 0.255
 los_margin: 0.1
 
 waypoint_spacing: 0.1
 path_margin: 0.6
-goal_tolerance: 0.35
+goal_tolerance: 0.1
 
 # http://gamma.cs.unc.edu/RVO2/documentation/2.0/params.html
 # timeStep
